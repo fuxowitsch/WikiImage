@@ -43,7 +43,8 @@ This returns the global usage on all WikiPedia pages for the first image found:
 You can also access the imagelist as represented in Wikipedia:
 
 `obj=WikiImage.new("Fred Flintstone")
-obj.imagelist`
+obj.imagelist
+`
 
 Note!
 -----
