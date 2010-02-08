@@ -1,0 +1,6 @@
+require 'rubygems'
+require 'spec'
+require 'cgi'
+require 'nokogiri'
+require 'open-uri'
+require 'wiki_image'
