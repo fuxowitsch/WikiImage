@@ -24,4 +24,15 @@ describe WikiImage, '#image' do
     obj=WikiImage.new("John Cleese")
     obj.imagelist.size.should > 0
   end
+  
+  it "should fill the stockpile" do
+    obj=WikiImage.new("John Cleese")
+    obj.getImages(:imageinfo)
+    obj.getImages(:globalusage)
+    firstkey=obj.imagelist.first
+    
+    [:globalusage,:imageinfo].each do |key|
+      obj.stockpile[firstkey][key].should_not be_nil
+    end
+  end
 end

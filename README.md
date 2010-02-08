@@ -44,9 +44,22 @@ You can also access the imagelist as represented in Wikipedia:
 
 `list = WikiImage.new("Fred Flintstone").imagelist`
 
+If you did use getImages on both properties you can access the stockpile which gives you a hash on all data:
+
+    obj=WikiImage.new("Fred Astaire")
+    obj.getImages(:imageinfo)
+    obj.getImages(:globalusage)
+    everything=obj.stockpile
+
+everything will then contain - well everything ;)
+
 Note!
 -----
 Always show a link to the license (:descriptionurl) and name the Author (:user)
+
+Tests
+-----
+Assuming you have rspec installed you can run the tests within the plugin directory by invoking rake. 
 
 ToDo
 ----
