@@ -1,10 +1,11 @@
 class WikiImage
   def initialize(keyword)
     @keyword=CGI.escape(keyword)
+    @imagelist=CGI.escape(get_images.join("|"))
   end
 
   def getImages
-     @images=get_imageinfo(CGI.escape(get_images.join("|")))
+     @images=get_imageinfo(@imagelist)
   end
   
   private
